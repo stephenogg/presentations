@@ -192,8 +192,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
 <section data-state="fiji1">
 	<style>.fiji1 header:after { content: "Introducing ImageJ and Fiji"; }</style>
-	<img class="imleft" src="img-ia/fiji1.png"/>
-	<ul class="right">
+	<img class="half left" src="img-ia/fiji1.png"/>
+	<ul class="half right">
 		<p>ImageJ is a program for image processing and analysis written in the <i>Java</i> programming language.</p><br>
 		<p>Fiji is a flavour of ImageJ that includes a set of useful plugins and an updating system.</p>
 		<p><span class="fragment highlight-red" data-fragment-index="1">F</span>iji <span class="fragment highlight-red" data-fragment-index="1">i</span>s <span class="fragment highlight-red" data-fragment-index="1">J</span>ust <span class="fragment highlight-red" data-fragment-index="1">I</span>mageJ.</p>
@@ -1553,12 +1553,11 @@ Reveal.initialize({
     controls: false,
 	slideNumber: true, //-- Added for development
 	plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMenu],
-dependencies: [
-{ src: 'plugin/markdown/marked.js' },
-{ src: 'plugin/notes/notes.js', async: true },
-{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-{ src: 'plugin/menu/menu.js' }
-],
+//dependencies: [
+//{ src: 'plugin/notes/notes.js', async: true },
+//{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+//{ src: 'plugin/menu/menu.js' }
+//],
 menu: {
 hideMissingTitles: true,
 themes: false,
