@@ -73,6 +73,13 @@ max-height:400px!important;
 border:1px solid #243d7c;
 padding:10px;
 }
+
+img.imboxbig{
+max-height:500px!important;
+/*border:1px solid #243d7c;*/
+padding:10px;
+}
+
 .reveal p.subtle {
 color:#ccc;
 font-size:60%;

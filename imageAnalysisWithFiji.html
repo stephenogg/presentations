@@ -43,14 +43,13 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 </section>
 
 <section data-markdown data-menu-title="Title">
-	<textarea>
+	<textarea data-template>
 		## Image Analysis with Fiji Using MD
 		#### Stephen Ogg, PhD
 		#### Microscopy Specialist
 		#### Centre for Developmental Neurobiology
 		#### King' College, London
-
-		Use *arrow-right* to advance the slides <!-- .element: class="subltle" -->
+		Use the ***arrow-right*** to advance the slides <!-- .element: class="subltle" -->
 	</textarea>
 </section>
 
@@ -78,16 +77,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 	<style>.fiji2a header:after { content: "Opening Test Data"; }</style>
 	<p>Menu commands to perform in Fiji will look like: <code>[File > Save]</code></p>
 	<p>Throughtout the presentation, test data will look like this: <a href="material/01-Photo.tif"><code>01-Photo.tif</code></a></p>
-	<img
-		data-fragment-index="1"
-		class="left half fragment"
-		src="img-ia/material_01.png"
-	/>
-	<img
-		data-fragment-index="2"
-		class="right half fragment"
-		src="img-ia/material_02.png"
-	/>
+	<img data-fragment-index="1" class="left half fragment" src="img-ia/material_01.png"/>
+	<img data-fragment-index="2" class="right half fragment" src="img-ia/material_02.png"/>
 	<p data-fragment-index="1" class="left half fragment"><span style="color:red">Right click and 'copy link'</span></p>
 	<p data-fragment-index="2" class="right half fragment"><code><span style="color:red">[File > Import > URL...]</span></code></p>
 	<p data-fragment-index="3" class="clear fragment">Paste the copied URL into the box (right click or use CTRL+v) and hit OK</p>
@@ -103,25 +94,15 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
 <section data-state="intro1">
 	<style>.intro1 header:after { content: "How an image is formed"; }</style>
-	<img
-		class="imbox"
-		src="img-ia/imageFormation01.png"
-	/>
+	<img class="imbox" src="img-ia/imageFormation01.png"/>
 	<p>Image Formation in a microscope is a two-step process.</p>
 </section>
 
 <section data-state="intro1">
 	<style>.intro1 header:after { content: "How an image is formed"; }</style>
 		<div>
-			<img
-				class="half"
-				src="img-ia/acq_widefield.png"
-			/>
-			<img
-			data-fragment-index="1"
-			class="half fragment"
-			src="img-ia/acq_lsm.png"
-			/>
+			<img class="half" src="img-ia/acq_widefield.png"/>
+			<img data-fragment-index="1" class="half fragment" src="img-ia/acq_lsm.png"/>
 		</div>
 	<p>'Detectors' convert photons into electrons.</p>
 	<ul>
@@ -132,63 +113,42 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
 <section data-state="intro1">
 	<style>.intro1 header:after { content: "How an image is formed"; }</style>
-	<img
-		class="imbox"
-		src="img-ia/detector.png"
-	/>
+	<img class="imbox" src="img-ia/detector.png" />
 	<p>Detectors collect photons and convert them to a voltage</p>
 </section>
 
 <section data-state="intro1">
 	<style>.intro1 header:after { content: "How an image is formed"; }</style>
-	<img 
-		class="imbox"
-		src="img-ia/ad_1.png"
-	/>
+	<img class="imbox" src="img-ia/ad_1.png"/>
 	<p>The A/D converter determines the dynamic range of the data</p>
 </section>
 
 <section data-state="intro1">
 	<style>.intro1 header:after { content: "How an image is formed"; }</style>
-	<img 
-		class="imbox"
-		src="img-ia/beaconText.png"
-	/>
+	<img class="imbox" src="img-ia/beaconText.png"/>
 </section>
 
 <section data-state="intro1">
 	<style>.intro1 header:after { content: "How an image is formed"; }</style>
-	<img 
-		class="imbox"
-		src="img-ia/beaconDigit.png"
-	/>
-	<p>The number of levels is determined by the A/D Converter</p>
+	<img class="imbox" src="img-ia/beaconDigit.png"/>
+	<p>The numbers and the range of levels are both determined by the A/D Converter</p>
 </section>
 
 <section data-state="intro1">
 	<style>.intro1 header:after { content: "How an image is formed"; }</style>
-	<img 
-		class="imbox"
-		src="img-ia/multiBit.png"
-	/>
+	<img class="imbox" src="img-ia/multiBit.png"/>
 	<p>Computers store only two values, 0 & 1. Each digit in computer-ese is a binary digit, or <em>bit</em></p>
 </section>
 
 <section data-state="intro1">
 	<style>.intro1 header:after { content: "How an image is formed"; }</style>
-	<img 
-		class="imbox"
-		src="img-ia/imagesAreNumbers.png"
-	/>
+	<img class="imbox" src="img-ia/imagesAreNumbers.png"/>
 	<p><strong><em>Images Are Numbers!!!</em></strong></p>
 </section>
 
 <section data-state="intro1">
 	<style>.intro1 header:after { content: "How an image is formed"; }</style>
-	<img 
-		class="imbox"
-		src="img-ia/bd3.png"
-	/>
+	<img class="imbox" src="img-ia/bd3.png"/>
 	<p>Unless you have good reason – always collect data at the highest possible bit depth</p>
 </section>
 
@@ -205,7 +165,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 <section data-state="fiji1">
 	<style>.fiji1 header:after { content: "Introducing ImageJ and Fiji"; }</style>
 	<img class="third left" src="img-ia/fiji1.png"/>
-		<p class="half right">ImageJ is a program for image processing and analysis written in the <i>Java</i> programming language.</p><br>
+	<ul class="half right">
+		<p>ImageJ is a program for image processing and analysis written in the <i>Java</i> programming language.</p><br>
 		<p>Fiji is a flavour of ImageJ that includes a set of useful plugins and an updating system.</p>
 		<p><span class="fragment highlight-red" data-fragment-index="1">F</span>iji <span class="fragment highlight-red" data-fragment-index="1">i</span>s <span class="fragment highlight-red" data-fragment-index="1">J</span>ust <span class="fragment highlight-red" data-fragment-index="1">I</span>mageJ.</p>
 		<li>Open Source (free to use & modify)</li>
@@ -214,6 +175,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 		<li>Scriptable for Automation</li>
 		<li>Vast Functionality</li>
 		<li>Includes the Bioformats Library</li>
+	</ul>
 	
 </section>
 
@@ -225,62 +187,42 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
 <section data-transition="none" data-state="fiji1">
 	<style>.fiji1 header:after { content: "Introducing ImageJ and Fiji"; }</style>
-	<img
-		class="imbox"
-		src="img-ia/fiji2_SO.001.png"
-	/>
+	<img class="imbox" src="img-ia/fiji2_SO.001.png"/>
 	<p>The Fiji Main Window</p>
 </section>
 
 <section data-transition="none" data-state="fiji1">
 	<style>.fiji1 header:after { content: "Introducing ImageJ and Fiji"; }</style>
-	<img
-		class="imbox"
-		src="img-ia/fiji2_SO.002.png"
-	/>
+	<img class="imbox" src="img-ia/fiji2_SO.002.png"/>
 	<p>The Fiji Main Window</p>
 </section>
 
 <section data-transition="none" data-state="fiji1">
 	<style>.fiji1 header:after { content: "Introducing ImageJ and Fiji"; }</style>
-	<img
-		class="imbox"
-		src="img-ia/fiji2_SO.003.png"
-	/>
+	<img class="imbox" src="img-ia/fiji2_SO.003.png"/>
 	<p>The Fiji Main Window</p>
 </section>
 <section data-transition="none" data-state="fiji1">
 	<style>.fiji1 header:after { content: "Introducing ImageJ and Fiji"; }</style>
-	<img
-		class="imbox"
-		src="img-ia/fiji2_SO.004.png"
-	/>
+	<img class="imbox" src="img-ia/fiji2_SO.004.png"/>
 	<p>The Fiji Main Window</p>
 </section>
 
 <section data-transition="none" data-state="fiji1">
 	<style>.fiji1 header:after { content: "Introducing ImageJ and Fiji"; }</style>
-	<img
-		class="imbox"
-		src="img-ia/fiji2_SO.005.png"
-	/>
+	<img class="imbox" src="img-ia/fiji2_SO.005.png"/>
 	<p>The Fiji Main Window</p>
 </section>
 
 <section data-state="fiji1">
 	<style>.fiji1 header:after { content: "Introducing ImageJ and Fiji"; }</style>
-	<img
-		class="imbox"
-		src="img-ia/fiji3_SO.001.png"
-	/>
+	<img class="imbox" src="img-ia/fiji3_SO.001.png"/>
 	<p>Drag and drop to open image files</p>
 </section>
 
 <section data-state="fiji1">
 	<style>.fiji1 header:after { content: "Introducing ImageJ and Fiji"; }</style>
-	<img
-		src="img-ia/fiji4_SO.png"
-	/>
+	<img class="imboxbig" src="img-ia/fiji4_SO.png"/>
 	<p>Unusually, Fiji Uses Floating Windows</p>
 </section>
 
